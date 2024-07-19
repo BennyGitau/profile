@@ -1,9 +1,27 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import router from "./router"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import ErrorBoundary from "./Pages/ErrorBoundary";
+import Layout from "./Layout";
+import Blog from "./Pages/Blog";
+import Portfolio from "./Pages/Portfolio";
+import Contact from "./Pages/Contact";
+import About from "./Pages/About";
 
-const routes = createBrowserRouter(router)
 function App() {
-  return (<RouterProvider router={routes}/>)
-}
+  return (
+    <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="portfolio" element={<Portfolio />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="*" element={<ErrorBoundary />} />
+          </Route>
+        </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;

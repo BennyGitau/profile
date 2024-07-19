@@ -2,7 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: #24383f;
-    color: white;
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+body.light {
+  background-color: rgb(235, 210, 210);
+  color: black;
+}
+.name {
+  font-family: poppins;
+}
+
+input .dark {
+  background-color: black;
+  color: white;
 }
