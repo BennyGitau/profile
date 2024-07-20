@@ -24,8 +24,8 @@ export default function Layout() {
             </button>
           </div>
 
-          <div className='flex flex-col fixed w-fit top-[25%] p-0 m-0 right-7 z-8'>
-            <ul className='flex flex-col text-left h-fit space-y-3 list-none my-4 mx-0'>
+          <div className='flex flex-row md:flex-col bottom-0 fixed md:w-fit md:top-[25%] p-0 md:m-0 md:right-7 z-8'>
+            <ul className='flex md:flex-col md:text-left md:h-fit md:space-y-3 list-none md:my-4 md:mx-0'>
               {[
                 { name: 'HOME', icon: faHome, path: '/' },
                 { name: 'ABOUT', icon: faUser, path: '/about' },

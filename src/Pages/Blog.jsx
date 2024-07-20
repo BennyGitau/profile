@@ -28,17 +28,17 @@ export default function Blog() {
   return (
     <div className={`container mx-auto p-4 transition-transform duration-1000 ease-out transform ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="text-center">
-        <h1 className="text-4xl sm:text-6xl font-bold text-gray-800">
+        <h1 className="text-4xl sm:text-6xl font-bold text-gray-500">
           MY <span className="text-yellow-500">BLOG</span>
         </h1>
       </div>
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
         {posts.map((post, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div key={index} className=" rounded-lg shadow-lg overflow-hidden">
             <img src={post.image} alt={`Image ${index + 1}`} className="w-full h-48 object-cover" />
             <div className="p-4">
               <h2 className="font-bold text-xl mb-2">{post.title}</h2>
-              <p className="text-gray-700">{post.description}</p>
+              <p className="text-gray-400">{post.description}</p>
             </div>
           </div>
         ))}

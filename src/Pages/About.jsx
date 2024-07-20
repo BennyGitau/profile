@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react';
+import { useTheme } from '../Context/ThemeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
@@ -65,13 +66,13 @@ const SkillCircle = ({ skill }) => (
         value={skill.percentage}
         text={`${skill.percentage}%`}
         styles={buildStyles({
-          textColor: '#333',
+          textColor: '',
           pathColor: '#FFA500',
           trailColor: '#d6d6d6',
         })}
       />
     </div>
-    <p className='text-gray-600 mt-2'>{skill.name}</p>
+    <p className='text-gray-500 mt-2'>{skill.name}</p>
   </div>
 );
 
@@ -87,7 +88,7 @@ const TimelineItem = ({ item, isEducation }) => (
         <span className='text-sm bg-gray-200 text-gray-700 rounded px-2 py-1'>{item.period}</span>
         <h3 className='text-lg font-semibold'>{item.title} {isEducation ? `— ${item.institution}` : `— ${item.company}`}</h3>
       </div>
-      <p className='text-gray-600 mt-2'>{item.description}</p>
+      <p className='text-gray-500 mt-2'>{item.description}</p>
     </div>
   </div>
 );
@@ -95,17 +96,19 @@ const TimelineItem = ({ item, isEducation }) => (
 export default function About() {
   const [visible, setVisible] = useState(false);
 
+  const { isDarkMode } = useTheme();
+
     useEffect(() => {
         setVisible(true);
     }, []);
   return (
-    <div className={`pl-4 transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <div className={`top-0 left-0 pl-4 w-full transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className='flex w-full h-40 text-center '>
-        <h1 className='text-6xl font-bold m-auto'>ABOUT <span className='text-orange-500'>ME</span></h1>
+        <h1 className='text-6xl text-gray-500 font-bold m-auto'>ABOUT <span className='text-orange-500'>ME</span></h1>
       </div>
-      <div>
-        <div className='flex flex-row space-x-3'>
-          <div className='p-4 w-[60%] space-y-4'>
+      <div className={`text-gray-400 ${isDarkMode ? 'text-gray-400' : 'light'}}`}>
+        <div className='flex flex-col md:flex-row space-x-3'>
+          <div className='p-4 w-full md:w-[60%] space-y-4'>
             <h2 className='name text-3xl w-full'>PERSONAL INFOS</h2>
             <section className='flex space-x-3'>
               <div className='w-1/2 space-y-4'>
@@ -121,10 +124,10 @@ export default function About() {
                 <p>Languages: English/Swahili</p>
               </div>
             </section>
-            <button className='hover:bg-yellow-500 rounded-xl p-2'>Download CV <FontAwesomeIcon icon={faDownload} className='ml-2'/></button>
+            <button className='bg-orange-400 text-white hover:bg-orange-500 rounded-xl p-2'>Download CV <FontAwesomeIcon icon={faDownload} className='ml-2'/></button>
           </div>
-          <div className='grid grid-cols-2 gap-4 w-[40%]'>
-            <div className='rounded-lg border-2 flex flex-col justify-center items-center p-6 bg-white'>
+          <div className='grid grid-cols-2 mt-10 md:mt-0 gap-4 md:w-[40%]'>
+            <div className='rounded-lg border-2 border-gray-400 flex flex-col justify-center items-center p-6'>
               <h1 className='text-5xl font-bold text-orange-500'>12<span className='text-3xl align-top'>+</span></h1>
               <div className='flex items-center space-x-2 mt-2'>
                 <div className='border-t-2 border-gray-300 w-8'></div>
@@ -133,7 +136,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className='rounded-lg border-2 flex flex-col justify-center items-center p-6 bg-white'>
+            <div className='rounded-lg border-2 border-gray-400 flex flex-col justify-center items-center p-6 '>
               <h1 className='text-5xl font-bold text-orange-500'>97<span className='text-3xl align-top'>+</span></h1>
               <div className='flex items-center space-x-2 mt-2'>
                 <div className='border-t-2 border-gray-300 w-8'></div>
@@ -142,7 +145,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className='rounded-lg border-2 flex flex-col justify-center items-center p-6 bg-white'>
+            <div className='rounded-lg border-2 border-gray-400 flex flex-col justify-center items-center p-6'>
               <h1 className='text-5xl font-bold text-orange-500'>81<span className='text-3xl align-top'>+</span></h1>
               <div className='flex items-center space-x-2 mt-2'>
                 <div className='border-t-2 border-gray-300 w-8'></div>
@@ -151,7 +154,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className='rounded-lg border-2 flex flex-col justify-center items-center p-6 bg-white'>
+            <div className='rounded-lg border-2 border-gray-400 flex flex-col justify-center items-center p-6 '>
               <h1 className='text-5xl font-bold text-orange-500'>53<span className='text-3xl align-top'>+</span></h1>
               <div className='flex items-center space-x-2 mt-2'>
                 <div className='border-t-2 border-gray-300 w-8'></div>
@@ -163,8 +166,8 @@ export default function About() {
           </div>
         </div>
         <div className='w-full flex flex-col items-center mt-8'>
-          <h2 className='text-2xl font-bold text-gray-600 my-6'>MY SKILLS</h2>
-          <div className='grid grid-cols-2 w-full sm:grid-cols-4 gap-6'>
+          <h2 className='text-2xl font-bold text-gray-500 my-6'>MY SKILLS</h2>
+          <div className='grid grid-cols-2 text w-full sm:grid-cols-4 gap-6'>
             {skills.map(skill => (
               <SkillCircle key={skill.name} skill={skill} />
             ))}
@@ -172,7 +175,7 @@ export default function About() {
         </div>
       </div>
       <div className='w-full flex flex-col ml-4 mt-8'>
-        <h2 className='text-2xl w-full text-center font-bold text-gray-600 my-6'>EXPERIENCE & EDUCATION</h2>
+        <h2 className='text-2xl w-full text-center font-bold text-gray-500 my-6'>EXPERIENCE & EDUCATION</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           <div className='space-y-5 '>
             {experiences.map((experience, index) => (

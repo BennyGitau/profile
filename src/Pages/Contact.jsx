@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithub, faLinkedin, faInstagram, } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone, faMapMarker, faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faMapMarker, faMailBulk } from '@fortawesome/free-solid-svg-icons';
 
 import { useTheme } from '../Context/ThemeContext';
 
@@ -14,6 +14,11 @@ export default function Contact() {
     subject: '',
     message: ''
   });
+  const [visible, setVisible] = useState(false);
+    useEffect(() => {
+        setVisible(true);
+    }, []);
+
 
   const handleChange = (e) => {
     setFormData({
@@ -38,11 +43,11 @@ export default function Contact() {
   };
 
   return (
-    <div className={`font-light ${isDarkMode ? 'dark' : 'light'}`}>
+    <div className={`font-light mb-16 md:mb-0 ${isDarkMode ? 'dark' : 'light'} transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <h1 className='text-6xl font-semibold text-center m-8'>
         GET IN <span className='text-orange-500'>TOUCH</span>
       </h1>
-      <div className='grid grid-cols-2 mt-10'>
+      <div className='md:grid md:grid-cols-2 mt-10 '>
         <div className='space-y-4 pl-4'>
           <h1 className='name text-3xl font-bold'>Just Say hi</h1>
           <p>Get in touch to discuss new projects, creative ideas or opportunities.</p>
@@ -114,10 +119,10 @@ export default function Contact() {
           required
         />
         <button type="submit" className='bg-orange-500 w-fit hover:bg-orange-600 text-white p-3 rounded-lg'>SEND MESSAGE</button>
-      </form>
+        </form>
         </div>
       </div>
-    </div>
+  </div>
   );
 }
 
