@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import ErrorBoundary from "./Pages/ErrorBoundary";
 import Layout from "./Layout";
@@ -22,6 +22,6 @@ function App() {
         </Routes>
     </Router>
   );
-};
+}
 
 export default App;
