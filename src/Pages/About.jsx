@@ -5,21 +5,22 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import mycv from '../assets/downloadables/BensonCV a.pdf'
 
 const skills = [
-  { name: 'HTML', percentage: 25 },
-  { name: 'JAVASCRIPT', percentage: 89 },
+  { name: 'HTML', percentage: 80 },
+  { name: 'JAVASCRIPT', percentage: 60 },
   { name: 'CSS', percentage: 70 },
-  { name: 'PHP', percentage: 66 },
-  { name: 'WORDPRESS', percentage: 95 },
-  { name: 'JQUERY', percentage: 50 },
-  { name: 'ANGULAR', percentage: 65 },
+  { name: 'PYTHON', percentage: 73 },
+  { name: 'FLASK', percentage: 80 },
+  { name: 'DJANGO', percentage: 50 },
+  { name: 'SQL', percentage: 75 },
   { name: 'REACT', percentage: 45 },
 ];
 
 const experiences = [
   {
-    period: '2018 - PRESENT',
+    period: '2024 - PRESENT',
     title: 'WEB DEVELOPER',
     company: 'Envato',
     description: 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit',
@@ -40,21 +41,21 @@ const experiences = [
 
 const educations = [
   {
-    period: '2015',
-    title: 'ENGINEERING DEGREE',
-    institution: 'Oxford University',
-    description: 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit',
+    period: '2024',
+    title: 'SOFTWARE ENGINEERING',
+    institution: 'MORINGA SCHOOL',
+    description: 'Full-stuck web app development with Python, Flask, Django, React',
   },
   {
-    period: '2012',
-    title: 'MASTER DEGREE',
-    institution: 'Kiev University',
+    period: '2022',
+    title: 'BA Civil Aviation Management',
+    institution: 'Moi University',
     description: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
   },
   {
-    period: '2009',
-    title: 'BACHELOR DEGREE',
-    institution: 'Tunis High School',
+    period: '2016',
+    title: 'SECODARY EDUCATION',
+    institution: 'Lenana School',
     description: 'Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt',
   },
 ];
@@ -110,7 +111,7 @@ export default function About() {
         <div className='flex flex-col md:flex-row space-x-3'>
           <div className='p-4 w-full md:w-[60%] space-y-4'>
             <h2 className='name text-3xl w-full'>PERSONAL INFOS</h2>
-            <section className='flex space-x-3'>
+            <section className='flex space-x-3 mb-4'>
               <div className='w-1/2 space-y-4'>
                 <p>First Name: Benson</p>
                 <p>Nationality: Kenya</p>
@@ -124,11 +125,13 @@ export default function About() {
                 <p>Languages: English/Swahili</p>
               </div>
             </section>
+            <a href={mycv} target='_blank' className='mt-3'>
             <button className='bg-orange-400 text-white hover:bg-orange-500 rounded-xl p-2'>Download CV <FontAwesomeIcon icon={faDownload} className='ml-2'/></button>
+            </a>
           </div>
           <div className='grid grid-cols-2 mt-10 md:mt-0 gap-4 md:w-[40%]'>
             <div className='rounded-lg border-2 border-gray-400 flex flex-col justify-center items-center p-6'>
-              <h1 className='text-5xl font-bold text-orange-500'>12<span className='text-3xl align-top'>+</span></h1>
+              <h1 className='text-5xl font-bold text-orange-500'>2<span className='text-3xl align-top'>+</span></h1>
               <div className='flex items-center space-x-2 mt-2'>
                 <div className='border-t-2 border-gray-300 w-8'></div>
                 <p className='text-center'>
@@ -137,7 +140,7 @@ export default function About() {
               </div>
             </div>
             <div className='rounded-lg border-2 border-gray-400 flex flex-col justify-center items-center p-6 '>
-              <h1 className='text-5xl font-bold text-orange-500'>97<span className='text-3xl align-top'>+</span></h1>
+              <h1 className='text-5xl font-bold text-orange-500'>10<span className='text-3xl align-top'>+</span></h1>
               <div className='flex items-center space-x-2 mt-2'>
                 <div className='border-t-2 border-gray-300 w-8'></div>
                 <p className='text-center'>
@@ -146,7 +149,7 @@ export default function About() {
               </div>
             </div>
             <div className='rounded-lg border-2 border-gray-400 flex flex-col justify-center items-center p-6'>
-              <h1 className='text-5xl font-bold text-orange-500'>81<span className='text-3xl align-top'>+</span></h1>
+              <h1 className='text-5xl font-bold text-orange-500'>15<span className='text-3xl align-top'>+</span></h1>
               <div className='flex items-center space-x-2 mt-2'>
                 <div className='border-t-2 border-gray-300 w-8'></div>
                 <p className='text-center'>
@@ -155,7 +158,7 @@ export default function About() {
               </div>
             </div>
             <div className='rounded-lg border-2 border-gray-400 flex flex-col justify-center items-center p-6 '>
-              <h1 className='text-5xl font-bold text-orange-500'>53<span className='text-3xl align-top'>+</span></h1>
+              <h1 className='text-5xl font-bold text-orange-500'>3<span className='text-3xl align-top'>+</span></h1>
               <div className='flex items-center space-x-2 mt-2'>
                 <div className='border-t-2 border-gray-300 w-8'></div>
                 <p className='text-center'>

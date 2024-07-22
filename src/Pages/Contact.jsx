@@ -44,11 +44,11 @@ export default function Contact() {
 
   return (
     <div className={`font-light mb-16 md:mb-0 ${isDarkMode ? 'dark' : 'light'} transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
-      <h1 className='text-6xl font-semibold text-center m-8'>
+      <h1 className='text-3xl md:text-6xl font-semibold text-center m-8'>
         GET IN <span className='text-orange-500'>TOUCH</span>
       </h1>
       <div className='md:grid md:grid-cols-2 mt-10 '>
-        <div className='space-y-4 pl-4'>
+        <div className='space-y-4 ml-4 mb-8 pl-4'>
           <h1 className='name text-3xl font-bold'>Just Say hi</h1>
           <p>Get in touch to discuss new projects, creative ideas or opportunities.</p>
           <h4 className='name font-semibold'>
@@ -65,22 +65,22 @@ export default function Contact() {
             <p className='normal font-normal pl-4'>+254795216928</p>
           <footer className='flex flex-row space-x-5 mt-6'>
             <a href="https://x.com/benny_gitau" target="_blank" rel="twitter">
-              <FontAwesomeIcon icon={faTwitter} size="2x" className='rounded-lg p-1 hover:bg-orange-500' />
+              <FontAwesomeIcon icon={faTwitter} size="1.5x" className='rounded-lg p-1 hover:bg-orange-500' />
             </a>
             <a href="https://github.com/BennyGitau" target="_blank" rel="github">
-              <FontAwesomeIcon icon={faGithub} size="2x" className='rounded-lg p-1 hover:bg-orange-500' />
+              <FontAwesomeIcon icon={faGithub} size="1.5x" className='rounded-lg p-1 hover:bg-orange-500' />
             </a>
             <a href="www.linkedin.com/in/benson-gitau-b89b6b191" target="_blank" rel="linkedin">
-              <FontAwesomeIcon icon={faLinkedin} size="2x" className='rounded-lg p-1 hover:bg-orange-500'/>
+              <FontAwesomeIcon icon={faLinkedin} size="1.5x" className='rounded-lg p-1 hover:bg-orange-500'/>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} size="2x" className='rounded-lg p-1 hover:bg-orange-500' />
+              <FontAwesomeIcon icon={faInstagram} size="1.5x" className='rounded-lg p-1 hover:bg-orange-500' />
             </a>
           </footer>
         </div>
         <div>
         <form onSubmit={handleSubmit} className={`flex flex-col space-y-8 ${isDarkMode ? 'dark' : 'light'}`}>
-        <div className='flex flex-row gap-4'>
+        <div className='flex flex-row  md:gap-4'>
           <input
             type="text"
             name="name"
@@ -109,11 +109,11 @@ export default function Contact() {
           onChange={handleChange}
           required
         />
-        <input
+        <textarea
           type="text"
           name="message"
           placeholder="YOUR MESSAGE"
-          className={`rounded-3xl  p-3 h-60 w-full ${isDarkMode ? 'bg-gray-950 border-1 text-white' : 'light border-2 border-orange-200'}`}
+          className={`rounded-3xl text-sm p-3 h-60 w-[100%] text-start ${isDarkMode ? 'bg-gray-950 border-1 text-white' : 'light border-2 border-orange-200'}`}
           value={formData.message}
           onChange={handleChange}
           required
