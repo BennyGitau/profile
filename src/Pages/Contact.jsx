@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithub, faLinkedin, faInstagram, } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faMapMarker, faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import { toast } from "react-toastify";
 
 import { useTheme } from '../Context/ThemeContext';
 
@@ -31,14 +32,22 @@ export default function Contact() {
     e.preventDefault();
     emailjs.send(
       'service_n129c7t', 
-      'template_n34g61m', 
+      'template_my1ix9i', 
       formData, 
       'IuxRMN79NNhKxODEK'
     )
     .then((response) => {
+      toast.success('Message sent!',{theme: 'colored', autoClose: 3000, position: 'top-center'});
       console.log('SUCCESS!', response.status, response.text);
     }, (err) => {
       console.log('FAILED...', err);
+    });
+
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
     });
   };
 
@@ -65,16 +74,16 @@ export default function Contact() {
             <p className='normal font-normal pl-4'>+254795216928</p>
           <footer className='flex flex-row space-x-5 mt-6'>
             <a href="https://x.com/benny_gitau" target="_blank" rel="twitter">
-              <FontAwesomeIcon icon={faTwitter} size="1.5x" className='rounded-lg p-1 hover:bg-orange-500' />
+              <FontAwesomeIcon icon={faTwitter} size="2x" className='rounded-lg p-1 hover:bg-orange-500' />
             </a>
             <a href="https://github.com/BennyGitau" target="_blank" rel="github">
-              <FontAwesomeIcon icon={faGithub} size="1.5x" className='rounded-lg p-1 hover:bg-orange-500' />
+              <FontAwesomeIcon icon={faGithub} size="2x" className='rounded-lg p-1 hover:bg-orange-500' />
             </a>
             <a href="www.linkedin.com/in/benson-gitau-b89b6b191" target="_blank" rel="linkedin">
-              <FontAwesomeIcon icon={faLinkedin} size="1.5x" className='rounded-lg p-1 hover:bg-orange-500'/>
+              <FontAwesomeIcon icon={faLinkedin} size="2x" className='rounded-lg p-1 hover:bg-orange-500'/>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} size="1.5x" className='rounded-lg p-1 hover:bg-orange-500' />
+              <FontAwesomeIcon icon={faInstagram} size="2x" className='rounded-lg p-1 hover:bg-orange-500' />
             </a>
           </footer>
         </div>

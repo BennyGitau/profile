@@ -5,7 +5,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import mycv from '../assets/downloadables/BensonCV a.pdf'
+import mycv from '../assets/downloadables/BensonGitau-cv.pdf';
 
 const skills = [
   { name: 'HTML', percentage: 80 },
@@ -20,22 +20,22 @@ const skills = [
 
 const experiences = [
   {
-    period: '2024 - PRESENT',
-    title: 'WEB DEVELOPER',
-    company: 'Envato',
-    description: 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit',
+    period: 'Dec 2021 - Jan 2024',
+    title: 'Relationship Officer',
+    company: 'Equity Bank',
+    description: 'I enhanced financial operations and improved customer service, leading to greater client satisfaction and operational efficiency.',
   },
   {
-    period: '2013 - 2018',
-    title: 'UI/UX DESIGNER',
-    company: 'Themeforest',
-    description: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
+    period: 'June 2021 - Aug 2021',
+    title: 'Apprentice',
+    company: 'Equity Bank',
+    description: 'I assisted with administrative and financial operations, and gained experience in digital banking and customer service.',
   },
   {
-    period: '2005 - 2013',
-    title: 'CONSULTANT',
-    company: 'Videohive',
-    description: 'Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt',
+    period: '2019 - May 2021',
+    title: 'Marketing Agent (Part Time)',
+    company: 'Equity Bank',
+    description: 'Served as a sales agent, responsible for online banking products.',
   },
 ];
 
@@ -50,13 +50,13 @@ const educations = [
     period: '2022',
     title: 'BA Civil Aviation Management',
     institution: 'Moi University',
-    description: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
+    description: 'Degree in Civil Aviation Management. Second class upper division',
   },
   {
     period: '2016',
     title: 'SECODARY EDUCATION',
     institution: 'Lenana School',
-    description: 'Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt',
+    description: 'Certificate of Kenya Secondary Education',
   },
 ];
 
@@ -103,11 +103,11 @@ export default function About() {
         setVisible(true);
     }, []);
   return (
-    <div className={`top-0 left-0 pl-4 w-full transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <div className={`top-0 left-0 pl-4 w-full mb-2 transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className='flex w-full h-40 text-center '>
         <h1 className='text-6xl text-gray-500 font-bold m-auto'>ABOUT <span className='text-orange-500'>ME</span></h1>
       </div>
-      <div className={`text-gray-400 ${isDarkMode ? 'text-gray-400' : 'light'}}`}>
+      <div >
         <div className='flex flex-col md:flex-row space-x-3'>
           <div className='p-4 w-full md:w-[60%] space-y-4'>
             <h2 className='name text-3xl w-full'>PERSONAL INFOS</h2>
@@ -126,7 +126,7 @@ export default function About() {
               </div>
             </section>
             <a href={mycv} target='_blank' className='mt-3'>
-            <button className='bg-orange-400 text-white hover:bg-orange-500 rounded-xl p-2'>Download CV <FontAwesomeIcon icon={faDownload} className='ml-2'/></button>
+            <button className='bg-orange-400 text-white hover:bg-orange-500 rounded-xl mt-4 p-2'>Download CV <FontAwesomeIcon icon={faDownload} className='ml-2'/></button>
             </a>
           </div>
           <div className='grid grid-cols-2 mt-10 md:mt-0 gap-4 md:w-[40%]'>

@@ -28,6 +28,10 @@ A pet sitting app specifically designed for dog owners and sitters. Admins can m
 ### ParkMate
 An app designed to help users find and secure parking spaces easily and efficiently. The app offers a dynamic marketplace where users can discover, rent, and manage parking spots based on their needs and preferences.
 
+### Nandias' Garden
+A meticulously designed application for managing a pizza shop and facilitating customer orders. This superb app is developed with Django and boasts a stylish Bootstrap design.
+
+
 
 ## 📫 How to reach me
 

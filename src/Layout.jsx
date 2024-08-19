@@ -6,7 +6,7 @@ import { faSun, faMoon, faHome, faUser, faBriefcase, faEnvelope, faComment } fro
 
 export default function Layout() {
   const { isDarkMode, toggleTheme } = useTheme();
-  const location = useLocation(); // Get the current location for active link checking
+  const location = useLocation(); 
 
   return (
     <div className={`flex m-0 p-0 w-full min-h-screen ${isDarkMode ? 'dark' : 'light'}`}>
@@ -24,21 +24,21 @@ export default function Layout() {
             </button>
           </div>
 
-          <div className='flex flex-row md:flex-col bottom-0 fixed md:w-fit md:top-[25%] p-0 md:m-0 md:right-7 z-8'>
-            <ul className='flex md:flex-col md:text-left md:h-fit md:space-y-3 list-none md:my-4 md:mx-0'>
+          <div className='flex flex-row mx-auto mt-5 w-full md:flex-col bottom-0 fixed md:w-fit md:top-[25%] p-0 md:m-0 md:right-7 z-8'>
+            <ul className='flex  w-full md:items-end md:flex-col md:text-left md:h-fit md:space-y-3 list-none md:my-4 md:mx-0'>
               {[
                 { name: 'HOME', icon: faHome, path: '/' },
                 { name: 'ABOUT', icon: faUser, path: '/about' },
-                { name: 'PORTFOLIO', icon: faBriefcase, path: '/portfolio' },
+                { name: 'PROJECTS', icon: faBriefcase, path: '/projects' },
                 { name: 'CONTACT', icon: faEnvelope, path: '/contact' },
                 { name: 'BLOG', icon: faComment, path: '/blog' }
               ].map((item, index) => (
-                <li key={index} className='group flex flex-row content-start mr-0 hover:bg-orange-500 transition hover:origin-left p-2 duration-900 w-full rounded-3xl'>
+                <li key={index} className='group flex flex-row content-start mr-0 hover:bg-orange-500 transition hover:origin-left p-2 duration-900 w-fit rounded-3xl'>
                   <NavLink
                     to={item.path}
                     className="flex flex-row items-center content-end justify-between right-0 w-full"
                   >
-                    <h2 className={`text-white text-xl text-center w-fit opacity-0 pr-2 group-hover:opacity-100 transition-opacity duration-300`}>
+                    <h2 className={`text-white text-xl text-center w-fit opacity-0 pr-2 group-hover:opacity-100 transition-opacity duration-300 hidden md:block`}>
                       {item.name}
                     </h2>
                     <FontAwesomeIcon
