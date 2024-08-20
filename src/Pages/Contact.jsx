@@ -118,7 +118,7 @@ export default function Contact() {
         </div>
         <div>
         <form onSubmit={handleSubmit} className={`flex flex-col space-y-8 ${isDarkMode ? 'dark' : 'light'}`}>
-        <div className='flex flex-row  md:gap-4'>
+        <div className='flex flex-col md:flex-row  md:gap-4'>
           <input
             type="text"
             name="name"

@@ -25,7 +25,7 @@ export default function Layout() {
           </div>
 
           <div className='flex flex-row mx-auto mt-5 w-full md:flex-col bottom-0 fixed md:w-fit md:top-[25%] p-0 md:m-0 md:right-7 z-8'>
-            <ul className='flex  w-full md:items-end md:flex-col md:text-left md:h-fit md:space-y-3 list-none md:my-4 md:mx-0'>
+            <ul className='flex mx-auto w-full md:items-end md:flex-col md:text-left md:h-fit md:space-y-3 list-none md:my-4 md:mx-0'>
               {[
                 { name: 'HOME', icon: faHome, path: '/' },
                 { name: 'ABOUT', icon: faUser, path: '/about' },
@@ -33,7 +33,7 @@ export default function Layout() {
                 { name: 'CONTACT', icon: faEnvelope, path: '/contact' },
                 { name: 'BLOG', icon: faComment, path: '/blog' }
               ].map((item, index) => (
-                <li key={index} className='group flex flex-row content-start mr-0 hover:bg-orange-500 transition hover:origin-left p-2 duration-900 w-fit rounded-3xl'>
+                <li key={index} className='group mx-auto max-w-lg flex flex-row content-start md:mr-0 hover:bg-orange-500 transition hover:origin-left p-2 duration-900 md:w-fit rounded-3xl'>
                   <NavLink
                     to={item.path}
                     className="flex flex-row items-center content-end justify-between right-0 w-full"

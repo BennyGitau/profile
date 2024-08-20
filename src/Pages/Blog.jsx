@@ -99,7 +99,7 @@ export default function Blog() {
   };
 
   return (
-    <div className={`container mx-auto h-screen ml-8 p-4 transition-transform duration-1000 ease-out transform ${isVisible ? 'translate-y-0' : '-translate-y-full'} ${isDarkMode ? 'dark' : 'light'}`}>
+    <div className={`container mx-auto mb-10 ml-8 p-4 transition-transform duration-1000 ease-out transform ${isVisible ? 'translate-y-0' : '-translate-y-full'} ${isDarkMode ? 'dark' : 'light'}`}>
       <div className="text-center">
         <h1 className="text-4xl sm:text-6xl font-bold text-gray-500">
           MY <span className="text-yellow-500">BLOG</span>

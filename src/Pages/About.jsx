@@ -104,7 +104,7 @@ export default function About() {
         setVisible(true);
     }, []);
   return (
-    <div className={`top-0 left-0 pl-4 w-full mb-2 transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <div className={`top-0 left-0 pl-4 w-full mb-10 transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className='flex w-full h-40 text-center '>
         <h1 className='text-6xl text-gray-500 font-bold m-auto'>ABOUT <span className='text-orange-500'>ME</span></h1>
       </div>
