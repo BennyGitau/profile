@@ -37,7 +37,14 @@ export default function Contact() {
       'IuxRMN79NNhKxODEK'
     )
     .then((response) => {
-      toast.success('Message sent!',{theme: 'colored', autoClose: 3000, position: 'top-center'});
+      toast.success('Message sent!',
+      { style: {
+        backgroundColor: '#f97316',
+        color: '#fff',
+        border: '1px solid #f97316',
+        borderRadius: '5px',          
+      }, 
+      autoClose: 3000, position: 'top-center'});
       console.log('SUCCESS!', response.status, response.text);
     }, (err) => {
       console.log('FAILED...', err);
@@ -72,19 +79,41 @@ export default function Contact() {
             <FontAwesomeIcon icon={faPhone} size="2x" className='rounded-lg p-1 text-orange-500'/>CALL ME
           </h4>
             <p className='normal font-normal pl-4'>+254795216928</p>
-          <footer className='flex flex-row space-x-5 mt-6'>
-            <a href="https://x.com/benny_gitau" target="_blank" rel="twitter">
-              <FontAwesomeIcon icon={faTwitter} size="2x" className='rounded-lg p-1 hover:bg-orange-500' />
+          <footer className=' mt-6'>
+            <div className='flex flex-row ml-20 space-x-5'>
+            <a 
+              href="https://x.com/benny_gitau" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className='rounded-lg p-1 hover:bg-orange-500 transition-colors duration-300'
+            >
+              <FontAwesomeIcon icon={faTwitter} size="2x" />
             </a>
-            <a href="https://github.com/BennyGitau" target="_blank" rel="github">
-              <FontAwesomeIcon icon={faGithub} size="2x" className='rounded-lg p-1 hover:bg-orange-500' />
+            <a 
+              href="https://github.com/BennyGitau" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className='rounded-lg p-1 hover:bg-orange-500 transition-colors duration-300'
+            >
+              <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
-            <a href="www.linkedin.com/in/benson-gitau-b89b6b191" target="_blank" rel="linkedin">
-              <FontAwesomeIcon icon={faLinkedin} size="2x" className='rounded-lg p-1 hover:bg-orange-500'/>
+            <a 
+              href="https://www.linkedin.com/in/benson-gitau-b89b6b191/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className='rounded-lg p-1 hover:bg-orange-500 transition-colors duration-300'
+            >
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} size="2x" className='rounded-lg p-1 hover:bg-orange-500' />
+            <a 
+              href="https://www.instagram.com/benny_gitau/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className='rounded-lg p-1 hover:bg-orange-500 transition-colors duration-300'
+            >
+              <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
+            </div>
           </footer>
         </div>
         <div>

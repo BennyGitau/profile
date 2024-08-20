@@ -110,7 +110,7 @@ function Portfolio() {
 
       {modal.open && (
         <div className={`fixed inset-0 ${isDarkMode ? 'bg-black bg-opacity-70' : 'bg-gray-200 bg-opacity-80'} flex items-center justify-center z-50`}>
-          <div className={`p-8 rounded-lg w-full max-w-lg relative ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
+          <div className={`p-8 rounded-lg w-full max-w-3xl relative ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
             <button
             className={`absolute top-2 right-2 ${isDarkMode ? 'text-white border border-white' : 'text-black border border-black'} text-4xl hover:text-gray-400  rounded-full `}
             onClick={closeModal}

@@ -130,8 +130,8 @@ export default function Blog() {
               <BiX />
             </button>
           </div>
-          <div className={`relative rounded-lg w-full max-w-4xl ${isDarkMode ? 'bg-gray-100 text-gray-600' : 'bg-black text-gray-600'}`}>
-            <div className={`flex flex-col max-h-[80vh] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-600  ${isDarkMode ? 'scrollbar-track-gray-100' :"scrollbar-track-gray-900"}`}>
+          <div className={`relative rounded-lg w-full max-w-4xl ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
+            <div className={`flex flex-col max-h-[80vh] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-600  ${isDarkMode ? 'scrollbar-track-gray-900' :"scrollbar-track-white"}`}>
               <div className='flex-grow p-8 '>
                 <h3 className='text-sm italic'>{modal.post.date}</h3>
                 <h2 className="text-2xl font-medium mb-4 mt-2 text-center capitalize ">{modal.post.title}</h2>

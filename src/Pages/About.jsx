@@ -6,6 +6,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import mycv from '../assets/downloadables/BensonGitau-cv.pdf';
+import { Link } from 'react-router-dom';
 
 const skills = [
   { name: 'HTML', percentage: 80 },
@@ -115,7 +116,7 @@ export default function About() {
               <div className='w-1/2 space-y-4'>
                 <p>First Name: Benson</p>
                 <p>Nationality: Kenya</p>
-                <p>Phone: 123456789</p>
+                <p>Phone: 0795216928</p>
                 <p>Freelance: Available</p>
               </div>
               <div className='w-1/2 space-y-4'>
@@ -139,6 +140,7 @@ export default function About() {
                 </p>
               </div>
             </div>
+            <Link to="/projects">
             <div className='rounded-lg border-2 border-gray-400 flex flex-col justify-center items-center p-6 '>
               <h1 className='text-5xl font-bold text-orange-500'>10<span className='text-3xl align-top'>+</span></h1>
               <div className='flex items-center space-x-2 mt-2'>
@@ -148,8 +150,9 @@ export default function About() {
                 </p>
               </div>
             </div>
+            </Link>
             <div className='rounded-lg border-2 border-gray-400 flex flex-col justify-center items-center p-6'>
-              <h1 className='text-5xl font-bold text-orange-500'>15<span className='text-3xl align-top'>+</span></h1>
+              <h1 className='text-5xl font-bold text-orange-500'>10<span className='text-3xl align-top'>+</span></h1>
               <div className='flex items-center space-x-2 mt-2'>
                 <div className='border-t-2 border-gray-300 w-8'></div>
                 <p className='text-center'>
@@ -158,7 +161,7 @@ export default function About() {
               </div>
             </div>
             <div className='rounded-lg border-2 border-gray-400 flex flex-col justify-center items-center p-6 '>
-              <h1 className='text-5xl font-bold text-orange-500'>3<span className='text-3xl align-top'>+</span></h1>
+              <h1 className='text-5xl font-bold text-orange-500'>2<span className='text-3xl align-top'>+</span></h1>
               <div className='flex items-center space-x-2 mt-2'>
                 <div className='border-t-2 border-gray-300 w-8'></div>
                 <p className='text-center'>
