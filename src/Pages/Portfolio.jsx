@@ -87,7 +87,7 @@ function Portfolio() {
   };
 
   return (
-    <div className={`container mx-auto ml-20 w-[90%] p-4 transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'} ${isDarkMode ? 'dark' : 'light'}`}>
+    <div className={`container mx-auto w-[90%] p-4 transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'} ${isDarkMode ? 'dark' : 'light'}`}>
       <div className="text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-400">
           MY <span className="text-yellow-500">PROJECTS</span>
