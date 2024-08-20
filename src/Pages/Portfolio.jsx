@@ -87,7 +87,7 @@ function Portfolio() {
   };
 
   return (
-    <div className={`container mx-auto w-[90%] p-4 transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'} ${isDarkMode ? 'dark' : 'light'}`}>
+    <div className={`container mx-auto ml-20 w-[90%] p-4 transition-transform duration-1000 ease-out transform ${visible ? 'translate-y-0' : '-translate-y-full'} ${isDarkMode ? 'dark' : 'light'}`}>
       <div className="text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-400">
           MY <span className="text-yellow-500">PROJECTS</span>
@@ -100,7 +100,7 @@ function Portfolio() {
             className="relative flex justify-center"
             onClick={() => openModal(project)}
           >
-            <img src={project.src} alt={project.name} className="w-full h-[250px] shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer" />
+            <img src={project.src} alt={project.name} className="w-full h-[260px] shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer" />
             <div className="absolute inset-0 flex items-center justify-center bg-orange-500 rounded-lg opacity-0 transition-opacity duration-300 hover:opacity-100">
               <span className="text-white text-xl font-bold">{project.name}</span>
             </div>
@@ -112,11 +112,11 @@ function Portfolio() {
         <div className={`fixed inset-0 ${isDarkMode ? 'bg-black bg-opacity-70' : 'bg-gray-200 bg-opacity-80'} flex items-center justify-center z-50`}>
           <div className={`p-8 rounded-lg w-full max-w-lg relative ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
             <button
-              className={`absolute text-4xl top-4 right-4 ${isDarkMode ? 'text-gray-400 hover:text-gray-200' : 'text-gray-600 hover:text-gray-800'}`}
-              onClick={closeModal}
-            >
-              <BiX size={35} />
-            </button>
+            className={`absolute top-2 right-2 ${isDarkMode ? 'text-white border border-white' : 'text-black border border-black'} text-4xl hover:text-gray-400  rounded-full `}
+            onClick={closeModal}
+          >
+            <BiX />
+          </button>
             <div className='w-[90%]'>
               <div className='flex flex-row items-center  mb-4 justify-between'>
                 <h2 className="text-2xl font-bold">{modal.project.name}</h2>
@@ -150,6 +150,7 @@ function Portfolio() {
                 </div>
             </div>
           </div>
+          
         </div>
       )}
     </div>

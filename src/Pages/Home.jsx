@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../assets/sampleLogo.jpg';
-
+import profile1 from "../assets/p1.jpeg";
+import profile2 from "../assets/p2.jpeg";
 export default function Home() {
     return (
         <section className={`flex flex-col mb-20 md:fixed top-0 left-0 md:max-h-screen md:flex-row justify-between gap-2`}>
@@ -8,9 +9,9 @@ export default function Home() {
                 <div className="md:fixed md:h-[200%] md:w-full md:rotate-[-15deg] md:left-[-83%] md:top-[-50%] md:bg-orange-500 z-0"></div>
                 
                 <img 
-                    src={logo} 
+                    src={profile2} 
                     alt="profile" 
-                    className="bg-cover w-[50%] aspect-square rounded-full md:bg-no-repeat md:h-[calc(100vh-80px)] md:w-[85%] z-10 md:rounded-[30px] md:m-[35px] shadow-xl shadow-black" 
+                    className="bg-cover object-cover w-[50%] aspect-square rounded-full md:bg-no-repeat md:h-[calc(100vh-80px)] md:w-[85%] z-10 md:rounded-[30px] md:m-[35px] shadow-xl shadow-black" 
                 />
             </div>
             <div className='flex flex-col mt-10 md:w-[45%] py-2 md:ml-[1.5rem] justify-center md:m-auto font-light'>
