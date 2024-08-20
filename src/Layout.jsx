@@ -3,10 +3,12 @@ import { NavLink, Outlet, useLocation } from 'react-router-dom'; // Added useLoc
 import { useTheme } from './Context/ThemeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon, faHome, faUser, faBriefcase, faEnvelope, faComment } from '@fortawesome/free-solid-svg-icons';
-
+import { BiSun, BiMoon } from 'react-icons/bi';
 export default function Layout() {
   const { isDarkMode, toggleTheme } = useTheme();
   const location = useLocation(); 
+  const Icon = isDarkMode ? BiSun : BiMoon;
+
 
   return (
     <div className={`flex m-0 p-0 w-full min-h-screen ${isDarkMode ? 'dark' : 'light'}`}>
@@ -17,13 +19,12 @@ export default function Layout() {
         <div className='flex flex-col py-4 my-6 text-md font-mono h-full w-full p-2'>
           <div className="w-fit fixed right-10 top-4 mb-4 rounded-full">
             <button
-              className={`right-0 rounded-full p-3 text-center ${isDarkMode ? ' bg-slate-900 hover:bg-yellow-300' : 'bg-slate-300 hover:bg-slate-800 hover:text-white'} transition duration-200`}
+              className={`right-0 rounded-full p-3 text-center ${isDarkMode ? 'bg-slate-900 hover:bg-yellow-300' : 'bg-slate-300 hover:bg-slate-800 hover:text-white'} transition duration-200`}
               onClick={toggleTheme}
             >
-              <FontAwesomeIcon className="h-5 w-5" icon={isDarkMode ? faSun : faMoon} />
+              {isDarkMode ? <BiSun className="h-5 w-5" /> : <BiMoon className="h-5 w-5" />}
             </button>
           </div>
-
           <div className='flex flex-row mx-auto mt-5 w-full md:flex-col bottom-0 fixed md:w-fit md:top-[25%] p-0 md:m-0 md:right-7 z-8'>
             <ul className='flex mx-auto w-full md:items-end md:flex-col md:text-left md:h-fit md:space-y-3 list-none md:my-4 md:mx-0'>
               {[
