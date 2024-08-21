@@ -111,7 +111,7 @@ export default function About() {
       <div >
         <div className='flex flex-col md:flex-row space-x-3'>
           <div className='p-4 w-full md:w-[60%] space-y-4'>
-            <h2 className='name text-3xl w-full'>PERSONAL INFOS</h2>
+            <h2 className='name text-3xl w-full'>PERSONAL INFO</h2>
             <section className='flex space-x-3 mb-4'>
               <div className='w-1/2 space-y-4'>
                 <p>First Name: Benson</p>

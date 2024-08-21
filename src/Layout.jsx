@@ -19,7 +19,7 @@ export default function Layout() {
         <div className='flex flex-col py-4 my-6 text-md font-mono h-full w-full p-2'>
           <div className="w-fit fixed right-10 top-4 mb-4 rounded-full">
             <button
-              className={`right-0 rounded-full p-3 text-center ${isDarkMode ? 'bg-slate-900 hover:bg-yellow-300' : 'bg-slate-300 hover:bg-slate-800 hover:text-white'} transition duration-200`}
+              className={`right-0 rounded-full p-2 text-center ${isDarkMode ? 'bg-slate-900 hover:bg-yellow-300' : 'bg-slate-300 hover:bg-slate-800 hover:text-white'} transition duration-200`}
               onClick={toggleTheme}
             >
               {isDarkMode ? <BiSun className="h-5 w-5" /> : <BiMoon className="h-5 w-5" />}
