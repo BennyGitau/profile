@@ -5,18 +5,20 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import mycv from '../assets/downloadables/BensonGitau-cv.pdf';
+import mycv from '../assets/downloadables/BENSON-GITAU-SE.pdf';
 import { Link } from 'react-router-dom';
 
 const skills = [
-  { name: 'HTML', percentage: 80 },
+  { name: 'HTML', percentage: 85 },
   { name: 'JAVASCRIPT', percentage: 60 },
-  { name: 'CSS', percentage: 70 },
-  { name: 'PYTHON', percentage: 73 },
+  { name: 'CSS', percentage: 85 },
+  { name: 'PYTHON', percentage: 80 },
   { name: 'FLASK', percentage: 80 },
-  { name: 'DJANGO', percentage: 50 },
+  { name: 'DJANGO', percentage: 75 },
   { name: 'SQL', percentage: 75 },
-  { name: 'REACT', percentage: 45 },
+  { name: 'REACT', percentage: 70 },
+  { name: 'POSTGRESQL', percentage: 86 },
+  { name: 'AI PROMPTING', percentage: 90 },
 ];
 
 const experiences = [
@@ -52,6 +54,12 @@ const educations = [
     title: 'BA Civil Aviation Management',
     institution: 'Moi University',
     description: 'Degree in Civil Aviation Management. Second class upper division',
+  },
+  {
+    period: '2017',
+    title: 'Computer Proficiency',
+    institution: 'Nairobi Technical & Training Institute',
+    description: 'Certificate of Proficiency in Computer',
   },
   {
     period: '2016',

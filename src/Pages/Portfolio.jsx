@@ -12,11 +12,20 @@ import laxeaura from "../assets/videos/laxeaura.mp4";
 import letswrite from "../assets/videos/letswrite.mp4";
 import nadiasgarden from "../assets/videos/nadiasgarden.mp4";
 import riderealm from "../assets/videos/riderealm.mp4";
+import ata from "../assets/ATA.webp"
 import { BiX } from 'react-icons/bi';
 import { useTheme } from '../Context/ThemeContext';
 
 
 const projects = [
+  { src: ata, name: 'Air Travel Assistance',
+    description: 'An AI-powered travel assistance app that provides flight and hotel booking services. It is built with React, Tailwind CSS, and Django. The app supports both light and dark modes.',
+    github: 'https://github.com/BennyGitau/ATA-project',
+    preview: "https://www.loom.com/share/f3b0ce37816f4705824233b0b3dca94e?sid=7ea41135-8ced-4499-8681-16f53af7a553",
+    technologies: ['React', 'Tailwind', 'Django', 'Python', 'Generative AI'],
+    type: 'video'
+  },
+
   { src: laxeAura, name: 'LaxeAura', 
     description: 'An e-commerce website that offers a wide range of beauty products. It is built with react and styled with tailwind css',
     github: 'https://github.com/BennyGitau/laxeAura',
