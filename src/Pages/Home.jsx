@@ -18,7 +18,7 @@ export default function Home() {
                 <h1 className="name text-center text-3xl md:text-5xl md:text-start font-sans text-orange-500 pb-1 font-medium"> - I'M BENSON GITAU. </h1>
                 <h1 className="name text-center text-3xl md:text-5xl md:text-start pb-8 font-thin">FULL-STACK DEV</h1>
                 <p className="border-l-4 ml-8 md:ml-0 border-orange-500 pl-2 z-10"> 
-                    I am a full-stack developer AI enthusiast.
+                    I am a full-stack developer and AI enthusiast.
                     I specialize in creating innovative digital solutions, from AI powered apps to community driven platforms.<br/>
                     <br/>
                     I'm passionate about leveraging technology to solve real-world challenges. 
