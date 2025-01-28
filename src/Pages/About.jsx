@@ -5,23 +5,32 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons/faDownload';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import mycv from '../assets/downloadables/BENSON-GITAU-SE.pdf';
+import mycv from '../assets/downloadables/Benson-Gitau-Cv.pdf';
 import { Link } from 'react-router-dom';
 
 const skills = [
   { name: 'HTML', percentage: 85 },
   { name: 'JAVASCRIPT', percentage: 60 },
   { name: 'CSS', percentage: 85 },
+  { name: 'WORDPRESS', percentage: 90 },
+  { name: 'Shopify', percentage: 90 },
+  { name: 'Webflow', percentage: 95 },
   { name: 'PYTHON', percentage: 80 },
   { name: 'FLASK', percentage: 80 },
   { name: 'DJANGO', percentage: 75 },
   { name: 'SQL', percentage: 75 },
-  { name: 'REACT', percentage: 70 },
+  { name: 'REACT', percentage: 85 },
   { name: 'POSTGRESQL', percentage: 86 },
   { name: 'AI PROMPTING', percentage: 90 },
 ];
 
 const experiences = [
+    {
+    period: 'Feb 2024 - Present',
+    title: 'Freelancer',
+    company: 'Fiverr/Upwork',
+    description: 'I offer freelance services, specializing in web development.',
+  },
   {
     period: 'Dec 2021 - Jan 2024',
     title: 'Relationship Officer',
@@ -43,6 +52,12 @@ const experiences = [
 ];
 
 const educations = [
+    {
+    period: '2024',
+    title: 'AI Career Essentials',
+    institution: 'ALX',
+    description: 'AI augumented professional development skills in digital age.',
+  },
   {
     period: '2024',
     title: 'SOFTWARE ENGINEERING',

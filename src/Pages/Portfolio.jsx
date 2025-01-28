@@ -12,12 +12,57 @@ import laxeaura from "../assets/videos/laxeaura.mp4";
 import letswrite from "../assets/videos/letswrite.mp4";
 import nadiasgarden from "../assets/videos/nadiasgarden.mp4";
 import riderealm from "../assets/videos/riderealm.mp4";
+import cafenairobip from "../assets/cafenairobi.png"
+import kirengeGoldp from "../assets/KirengeGold.png"
+import agenticBlockchainp from "../assets/agenticblockchain.png"
+import tajiEquityp from "../assets/Tajiequity.png"
+import foreArcp from "../assets/forearc.png"
+import agentic from "../assets/agentic.jpeg"
+import Ev from "../assets/EV.jpeg"
+import Kirenge from "../assets/Kirenge.jpeg"
+import Cafe from "../assets/Cafe.jpeg"
+import Taji from "../assets/Taji.jpeg"
 import ata from "../assets/ATA.webp"
 import { BiX } from 'react-icons/bi';
 import { useTheme } from '../Context/ThemeContext';
 
 
 const projects = [
+    { src: Cafe, name: 'Cafe Nairobi',
+    description: 'An E-commerce website that offers a wide range of coffee products from Kenya. It is built with react and styled with tailwind css',
+    github: 'https://cafenairobi.com/',
+    preview: cafenairobip,
+    technologies: ['Shopify', 'Bootstrap', 'HTML', 'JQuery'],
+    type: 'image'
+  },
+    { src: Kirenge, name: 'Kirenge Gold',
+    description: 'An E-commerce store that offers a wide range of coffee products',
+    github: 'https://0etvh6-ym.myshopify.com/',
+    preview: kirengeGoldp,
+    technologies: ['Shopify', 'Bootstrap', 'HTML', 'JQuery'],
+    type: 'image'
+  },
+    { src: agentic, name: 'agenticBLOCKCHAIN',
+    description: 'A business website for a agentic AI and blockchain startup. It combines agentic AI with the power of blockchain to revolutionize e-commerce.',
+    github: 'https://agenticblockchain.ai/',
+    preview: agenticBlockchainp,
+    technologies: ['Wordpress', 'PHP', 'CSS'],
+    type: 'image'
+  },
+    { src: Ev, name: 'ForeArc EV Technologies',
+    description: 'An online store that offers EV charging technology and solar power solutions',
+    github: 'https://forearc.com/',
+    preview: foreArcp,
+    technologies: ['Wordpress', 'PHP', 'CSS'],
+    type: 'image'
+  },
+    { src: Taji, name: 'TajiEquity',
+    description: 'A real Estate website that offers a wide range of from buying to renovating houses',
+    github: 'https://www.tajiequity.com/',
+    preview: tajiEquityp,
+    technologies: ['Webflow', 'JavaScript', 'Figma', 'CSS'],
+    type: 'image'
+  },
   { src: ata, name: 'Air Travel Assistance',
     description: 'An AI-powered travel assistance app that provides flight and hotel booking services. It is built with React, Tailwind CSS, and Django. The app supports both light and dark modes.',
     github: 'https://github.com/BennyGitau/ATA-project',
@@ -43,7 +88,7 @@ const projects = [
     },
   { src: RideRealm, name: 'RideRealm', 
     description: 'App that allow people to post and display their favorite rides',
-    github: 'https://github.com/BennyGitau/Ride-Realm',
+    github: 'https://github.com/BennyGitau/Autocars-Kenya',
     preview: riderealm,
     technologies: ['CSS', 'JavaScript', 'HTML', 'JSON'],
     type: 'video'
@@ -118,7 +163,7 @@ function Portfolio() {
       </div>
 
       {modal.open && (
-        <div className={`fixed inset-0 ${isDarkMode ? 'bg-black bg-opacity-70' : 'bg-gray-200 bg-opacity-80'} flex items-center justify-center z-50`}>
+        <div className={` absolute inset-0 ${isDarkMode ? 'bg-black bg-opacity-70' : 'bg-gray-200 bg-opacity-80'} flex items-center justify-center z-50`}>
           <div className={`p-8 rounded-lg w-full max-w-3xl relative ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
             <button
             className={`absolute top-2 right-2 ${isDarkMode ? 'text-white border border-white' : 'text-black border border-black'} text-4xl hover:text-gray-400  rounded-full `}
@@ -131,7 +176,7 @@ function Portfolio() {
                 <h2 className="text-2xl font-bold">{modal.project.name}</h2>
                 <a href={modal.project.github} target="_blank" rel="noopener noreferrer" className="block">
                   <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">
-                    View on GitHub
+                    Preview
                   </button>
                 </a>
               </div>
